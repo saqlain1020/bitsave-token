@@ -54,6 +54,9 @@ const theme = createMuiTheme({
     medium: "0px 0px 30px rgba(0,0,0,0.1)",
   },
   customColors: {},
+  fonts:{
+    quicksand: "'Quicksand', sans-serif",
+  }
 });
 
 export default theme;

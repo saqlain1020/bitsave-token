@@ -13,6 +13,12 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     cursor: "pointer",
   },
+  inputContainer:{
+    display: "flex", alignItems: "center",
+    [theme.breakpoints.down('xs')]:{
+      flexFlow:'column'
+    }
+  },
   buyBtn: {
     width: 200,
     height: 45,
@@ -26,7 +32,7 @@ const Balance = () => {
 
   return (
     <div className={classes.root}>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className={classes.inputContainer} >
         {/* input */}
         <div>
           <Typography color="primary" style={{ marginLeft: 10 }}>

@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
   mainHeading: {
     fontWeight: 300,
     paddingTop: 150,
+    [theme.breakpoints.down('xs')]:{
+      paddingTop: 50,
+    }
   },
   para: {
     margin: "auto",
