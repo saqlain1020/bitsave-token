@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     flexFlow: "column",
-    marginTop: 30,
+    marginTop: 50,
   },
   max: {
     color: theme.palette.primary.main,

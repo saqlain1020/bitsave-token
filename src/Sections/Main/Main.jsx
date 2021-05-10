@@ -8,11 +8,13 @@ import {
 } from "@material-ui/core";
 import Bg from "src/Assets/images/background-mask.png";
 import Balance from "src/Components/Balance/Balance";
+import Countdown from "src/Components/Countdown/Countdown";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     background: `url(${Bg})`,
     backgroundSize: "cover",
+    minHeight: "calc(100vh - 60px)",
   },
   mainHeading: {
     fontWeight: 300,
@@ -23,6 +25,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
     maxWidth: 670,
     letterSpacing: 1,
+  },
+  iconsContainer: {
+    display: "flex",
+    justifyContent: "flex-end",
+    marginTop: 150,
+  },
+  icon: {
+    color: theme.palette.secondary.light,
+    marginRight: 20,
+    cursor: "pointer",
   },
 }));
 
@@ -47,7 +59,7 @@ const Main = () => {
           allows for 4% per annum while having the coin itself
         </Typography>
         <center>
-          <Button variant="contained" color="primary" style={{ marginTop: 20 }}>
+          <Button variant="contained" color="primary" style={{ marginTop: 40 }}>
             Buy on Pancake Swap
           </Button>
         </center>
@@ -57,7 +69,32 @@ const Main = () => {
             <Balance />
           </Grid>
           {/* Countdown */}
-          <Grid item xs={12} sm={6}></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            style={{
+              paddingTop: 100,
+              display: "flex",
+              alignItems: "flex-end",
+              flexFlow: "column",
+            }}
+          >
+            <div>
+              <Typography color="secondary" style={{ fontWeight: 500 }}>
+                PRESALE ENDS IN
+              </Typography>
+              <Countdown />
+            </div>
+          </Grid>
+          <Grid item xs={12} className={classes.iconsContainer}>
+            <i className={"fab fa-facebook-f" + " " + classes.icon}></i>
+            <i className={"fab fa-twitter" + " " + classes.icon}></i>
+            <i className={"fab fa-youtube" + " " + classes.icon}></i>
+            <i className={"fab fa-github" + " " + classes.icon}></i>
+            <i className={"fab fa-bitcoin" + " " + classes.icon}></i>
+            <i className={"fab fa-medium-m" + " " + classes.icon}></i>
+          </Grid>
         </Grid>
       </div>
     </Container>
