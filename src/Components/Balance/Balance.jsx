@@ -5,13 +5,19 @@ import TimelineSlide from "../TimelineSlide/TimelineSlide";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    justifyContent: "center",
+    alignItems: "center",
     flexFlow: "column",
-    marginTop: 30,
+    marginTop: 50,
   },
   max: {
     color: theme.palette.primary.main,
     cursor: "pointer",
+  },
+  inputContainer:{
+    display: "flex", alignItems: "center",
+    [theme.breakpoints.down('xs')]:{
+      flexFlow:'column'
+    }
   },
   buyBtn: {
     width: 200,
@@ -26,7 +32,7 @@ const Balance = () => {
 
   return (
     <div className={classes.root}>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className={classes.inputContainer} >
         {/* input */}
         <div>
           <Typography color="primary" style={{ marginLeft: 10 }}>

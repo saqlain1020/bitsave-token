@@ -7,6 +7,7 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: "rgb(15,25,50)",
+      light: "rgb(152,174,208)",
     },
     text: {
       primary: "#ffffff",
@@ -53,6 +54,9 @@ const theme = createMuiTheme({
     medium: "0px 0px 30px rgba(0,0,0,0.1)",
   },
   customColors: {},
+  fonts:{
+    quicksand: "'Quicksand', sans-serif",
+  }
 });
 
 export default theme;

@@ -51,15 +51,16 @@ const useStyles = makeStyles((theme)=>({
     item:{
         position:"absolute",
         top:0,
-        left:"10%",
     },
     itemText:{
         fontSize:12,
     },
     line:{
-        width:1,
+        width:2,
         height:30,
-        backgroundColor: theme.palette.secondary.main
+        backgroundColor: "rgb(152,174,208)",
+        left:"calc(50% - 2px)",
+        position:"relative"
     }
 }))
 
@@ -91,7 +92,7 @@ const TimelineSlide = () => {
             {/* width same as slide */}
             <div className={classes.itemsDiv}>
                 {/* item */}
-                <div className={classes.item}>
+                <div className={classes.item} style={{left:"4%"}}>
                     {/* Line */}
                     <div className={classes.line}></div>
                     {/* text */}
@@ -100,9 +101,24 @@ const TimelineSlide = () => {
                     </Typography>
                 </div>
                 {/* item */}
-                <div></div>
+                <div className={classes.item} style={{left:"45%"}}>
+                    {/* Line */}
+                    <div className={classes.line}></div>
+                    {/* text */}
+                    <Typography color="secondary" className={classes.itemText}>
+                        CROWDSALE
+                    </Typography>
+                </div>
                 {/* item */}
-                <div></div>
+                <div className={classes.item} style={{left:"82%"}}>
+                    {/* Line */}
+                    <div className={classes.line}></div>
+                    {/* text */}
+                    <Typography color="secondary" className={classes.itemText}>
+                        500 BNB Hard Cap
+                    </Typography>
+                </div>
+                
             </div>
         </div>
     )
