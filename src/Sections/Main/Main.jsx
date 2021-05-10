@@ -1,6 +1,13 @@
 import React from "react";
-import { Button, Container, makeStyles, Typography } from "@material-ui/core";
+import {
+  Button,
+  Container,
+  Grid,
+  makeStyles,
+  Typography,
+} from "@material-ui/core";
 import Bg from "src/Assets/images/background-mask.png";
+import Balance from "src/Components/Balance/Balance";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     paddingTop: 150,
   },
-  para:{
-      margin:"auto",
-      marginTop:20,
-      maxWidth:670,
-      letterSpacing:1,
-  }
+  para: {
+    margin: "auto",
+    marginTop: 20,
+    maxWidth: 670,
+    letterSpacing: 1,
+  },
 }));
 
 const Main = () => {
@@ -40,10 +47,18 @@ const Main = () => {
           allows for 4% per annum while having the coin itself
         </Typography>
         <center>
-            <Button variant="contained" color="primary" style={{marginTop:20,}}>
-                Buy on Pancake Swap
-            </Button>
+          <Button variant="contained" color="primary" style={{ marginTop: 20 }}>
+            Buy on Pancake Swap
+          </Button>
         </center>
+        <Grid container spacing={2}>
+          {/* Balance */}
+          <Grid item xs={12} sm={6}>
+            <Balance />
+          </Grid>
+          {/* Countdown */}
+          <Grid item xs={12} sm={6}></Grid>
+        </Grid>
       </div>
     </Container>
   );

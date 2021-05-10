@@ -24,6 +24,17 @@ const theme = createMuiTheme({
       label: {
         fontWeight: 300,
       },
+      outlinedPrimary:{
+        color: "#ffffff",
+      }
+    },
+    MuiOutlinedInput:{
+      root:{
+        color: "rgb(152,174,208)",
+        "& div,fieldset,input":{
+          borderColor: "rgba(152,174,208,.3) !important"
+        }
+      }
     },
     MuiTypography: {
       body1: {
