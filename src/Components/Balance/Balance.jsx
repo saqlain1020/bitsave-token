@@ -5,7 +5,7 @@ import TimelineSlide from "../TimelineSlide/TimelineSlide";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    justifyContent: "center",
+    alignItems: "center",
     flexFlow: "column",
     marginTop: 30,
   },
