@@ -4,7 +4,9 @@ import TitleHeading from "./../../Components/TitleHeading/TitleHeading";
 import Image from "src/Assets/images/business.png"
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+      marginBottom:20,
+  },
 }));
 
 const Business = () => {

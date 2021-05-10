@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mainHeading: {
     fontWeight: 300,
-    paddingTop: 150,
+    paddingTop: 180,
     [theme.breakpoints.down('xs')]:{
       paddingTop: 50,
     }
