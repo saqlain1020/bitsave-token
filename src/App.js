@@ -7,17 +7,19 @@ import Main from './Sections/Main/Main';
 import Roadmap from './Sections/Roadmap/Roadmap';
 import Tokens from './Sections/Tokens/Tokens';
 import Contact from './Sections/Contact/Contact';
+import { useEagerConnect } from '@react-dapp/wallet'
 
 function App() {
+  useEagerConnect()
   return (
     <Container maxWidth="xl" disableGutters>
-      <Navbar/>
-      <Main/>
-      <Business/>
-      <Features/>
-      <Tokens/>
-      <Roadmap/>
-      <Contact/>
+      <Navbar />
+      <Main />
+      <Business />
+      <Features />
+      <Tokens />
+      <Roadmap />
+      <Contact />
     </Container>
   );
 }

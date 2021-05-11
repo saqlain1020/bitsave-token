@@ -1,72 +1,74 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles((theme)=>({
-    root:{
-        maxWidth:600,
-        width:"100%"
+const useStyles = makeStyles((theme) => ({
+    root: {
+        maxWidth: 600,
+        width: "100%"
     },
-    slide:{
-        height:4,
-        borderRadius:360,
+    slide: {
+        height: 4,
+        borderRadius: 360,
         background: "rgb(152,174,208)",
-        position:"relative",
+        position: "relative",
     },
-    subSlide:{
-        width:"15%",
-        height:"100%",
+    subSlide: {
+        width: props => `${props.raised}%`,
+        height: "100%",
         background: theme.palette.primary.main,
-        position:"absolute",
-        top:0,
-        left:0,
+        position: "absolute",
+        top: 0,
+        left: 0,
     },
-    subSlideEnd:{
-        width:"10%",
-        height:"100%",
+    subSlideEnd: {
+        width: "10%",
+        height: "100%",
         background: theme.palette.primary.main,
-        position:"absolute",
-        opacity:.5,
-        top:0,
-        right:0,
+        position: "absolute",
+        opacity: .5,
+        top: 0,
+        right: 0,
     },
-    btnWrapper:{
-        height:"100%",
-        position:"absolute",
-        bottom:28,
-        left:"15%",
+    btnWrapper: {
+        height: "100%",
+        position: "absolute",
+        bottom: 28,
+        left: props => `${props.raised}%`,
     },
-    slideBtn:{
-        width:18,
-        height:18,
-        background:theme.palette.primary.main,
+    slideBtn: {
+        width: 18,
+        height: 18,
+        background: theme.palette.primary.main,
         border: "2px solid white",
-        borderRadius:360,
+        borderRadius: 360,
+        marginTop: 20,
     },
-    valueText:{
+    valueText: {
         transform: "translateX(-20px)"
     },
-    itemsDiv:{
-        position:"relative",
+    itemsDiv: {
+        position: "relative",
     },
-    item:{
-        position:"absolute",
-        top:0,
+    item: {
+        position: "absolute",
+        top: 0,
     },
-    itemText:{
-        fontSize:12,
+    itemText: {
+        fontSize: 12,
     },
-    line:{
-        width:2,
-        height:30,
+    line: {
+        width: 2,
+        height: 30,
         backgroundColor: "rgb(152,174,208)",
-        left:"calc(50% - 2px)",
-        position:"relative"
+        left: "calc(50% - 2px)",
+        position: "relative"
     }
 }))
 
 const TimelineSlide = () => {
-    const classes = useStyles();
-    
+    const props = { raised: 70 };
+    const classes = useStyles(props);
+
     return (
         <div className={classes.root}>
             {/* slide */}
@@ -81,10 +83,10 @@ const TimelineSlide = () => {
                 <div className={classes.btnWrapper}>
                     {/* text */}
                     <Typography className={classes.valueText} color="primary" align="center">
-                        50 BNB RAISED
+                        
                     </Typography>
                     {/* btn */}
-                    <div className={classes.slideBtn}>
+                    <div className={classes.slideBtn} >
 
                     </div>
                 </div>
@@ -92,16 +94,16 @@ const TimelineSlide = () => {
             {/* width same as slide */}
             <div className={classes.itemsDiv}>
                 {/* item */}
-                <div className={classes.item} style={{left:"4%"}}>
+                <div className={classes.item} style={{ left: "4%" }}>
                     {/* Line */}
                     <div className={classes.line}></div>
                     {/* text */}
                     <Typography color="secondary" className={classes.itemText}>
-                        100 BNB Soft Cap
+                        10 ETH Soft Cap
                     </Typography>
                 </div>
                 {/* item */}
-                <div className={classes.item} style={{left:"45%"}}>
+                <div className={classes.item} style={{ left: "45%" }}>
                     {/* Line */}
                     <div className={classes.line}></div>
                     {/* text */}
@@ -110,15 +112,15 @@ const TimelineSlide = () => {
                     </Typography>
                 </div>
                 {/* item */}
-                <div className={classes.item} style={{left:"82%"}}>
+                <div className={classes.item} style={{ left: "82%" }}>
                     {/* Line */}
                     <div className={classes.line}></div>
                     {/* text */}
                     <Typography color="secondary" className={classes.itemText}>
-                        500 BNB Hard Cap
+                        50 ETH Hard Cap
                     </Typography>
                 </div>
-                
+
             </div>
         </div>
     )

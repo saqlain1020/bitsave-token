@@ -4,11 +4,21 @@
   margin: 0;
   box-sizing: border-box;
 }
-.center{
+
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body{
-  background-color: rgb(15,25,50);
+
+body {
+  background-color: rgb(15, 25, 50);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
 }

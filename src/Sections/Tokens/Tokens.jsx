@@ -18,22 +18,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const data = [
-  { color: "#a963ff", title: "START TIME", date: "15 SEP, 2018" },
-  { color: "#a963ff", title: "TOKEN SYMBOL", date: "ICOX" },
-  { color: "#f42f54", title: "END TIME", date: "30 NOV, 2018" },
-  { color: "#f42f54", title: "TOKENS OFFERED", date: "15.0 M" },
-  { color: "#f5a946", title: "SOFT CAP", date: "1.5 K" },
-  { color: "#f5a946", title: "SOFT CAP", date: "1.5 K" },
-  { color: "#63a5ff", title: "CROWDSALE", date: "10.5 M" },
-  { color: "#63a5ff", title: "CROWDSALE", date: "10.5 M" },
-  { color: "#ff8d87", title: "HARD CAP", date: "12.0 M" },
-  { color: "#ff8d87", title: "HARD CAP", date: "12.0 M" },
+  { color: "#f42f54", title: "50%", date: "PUBLIC SALE/SWAP TOKENS" },
+  { color: "#a963ff", title: "20%", date: "BURNED" },
+  { color: "#ff8d87", title: "10%", date: "PRESALE" },
+  { color: "#43c454", title: "5%", date: "RESERVE FUNDS" },
+  { color: "#f5a946", title: "5%", date: "TEAM & FOUNDERS" },
+  { color: "#bd8132", title: "10%", date: "DEVELOPMENT COST" },
 ];
 const Tokens = () => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg" className={classes.root}>
+    <Container id='tokenomics' maxWidth="lg" className={classes.root}>
       <TitleHeading heading="TOKENS" background="TOKEN DETAILS" />
       <Typography align="center" color="secondary" className={classes.para}>
         The ever popular and most commonly used blockchain Ethereum is being
@@ -84,16 +80,19 @@ const Tokens = () => {
           <PieChart
             style={{ width: "80%", maxWidth: 400 }}
             data={[
-              { title: "One", value: 10, color: "#f42f54" },
-              { title: "Two", value: 15, color: "#1f2e4d" },
-              { title: "Three", value: 20, color: "#1f2e4d" },
+              { title: "20%", value: 20, color: "#a963ff" },
+              { title: "50%", value: 50, color: "#f42f54" },
+              { title: "10%", value: 10, color: "#ff8d87" },
+              { title: "5%", value: 5, color: "#43c454" },
+              { title: "5%", value: 5, color: "#f5a946" },
+              { title: "10%", value: 10, color: "#bd8132" },
             ]}
-            // radius={PieChart.defaultProps.radius - shiftSize}
-            // segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
-            // label={({ dataEntry }) => dataEntry.value}
-            // labelStyle={{
-            //   ...defaultLabelStyle,
-            // }}
+          // radius={PieChart.defaultProps.radius - shiftSize}
+          // segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
+          // label={({ dataEntry }) => dataEntry.value}
+          // labelStyle={{
+          //   ...defaultLabelStyle,
+          // }}
           />
         </Grid>
       </Grid>

@@ -50,7 +50,7 @@ const Contact = () => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg" className={classes.root}>
+    <Container id='contact' maxWidth="lg" className={classes.root}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <div className={classes.image}>

@@ -45,7 +45,7 @@ const Main = () => {
   const classes = useStyles();
 
   return (
-    <Container className={classes.root} maxWidth="lg">
+    <Container id="home" className={classes.root} maxWidth="lg">
       <div>
         <Typography
           variant="h4"
@@ -62,8 +62,8 @@ const Main = () => {
           allows for 4% per annum while having the coin itself
         </Typography>
         <center>
-          <Button variant="contained" color="primary" style={{ marginTop: 40 }}>
-            Buy on Pancake Swap
+          <Button onClick={() => window.open('https://app.uniswap.org/#/swap?outputCurrency=0xC08c7d755f8950e0b41b43f27b0A10d79029330D')} variant="contained" color="primary" style={{ marginTop: 40 }}>
+            Buy on Uniswap
           </Button>
         </center>
         <Grid container spacing={2}>

@@ -20,7 +20,7 @@ const Countdown = () => {
 
   return (
     <div className={classes.root}>
-      <Count date={Date.now() + 100000} />
+      <Count date={1620735594000 + 604800000} />
       <Typography color="secondary" className={classes.text}>
         &nbsp;&nbsp;&nbsp;Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

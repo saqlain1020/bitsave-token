@@ -13,12 +13,12 @@ const Business = () => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg" className={classes.root}>
+    <Container id='business' maxWidth="lg" className={classes.root}>
       <TitleHeading heading="BUSINESS MODEL" background="WHAT AND HOW" />
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} style={{marginTop:20,}}>
           <Typography variant="h5" color="primary">
-            Business Model:BitSafe (SAFE)
+            Business Model: BitSafe (SAFE)
           </Typography>
           <Typography color="secondary" style={{marginTop:20,}}>
             The BitSafe Coin (SAFE) will be used to pay for any fees on the

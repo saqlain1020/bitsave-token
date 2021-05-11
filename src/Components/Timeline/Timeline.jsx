@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
   },
   subSlide: {
-    width: "38%",
+    width: "15%",
     height: "100%",
     background: theme.palette.primary.main,
     position: "absolute",
@@ -83,7 +83,7 @@ const Timeline = () => {
         >
           {/* text */}
           <Typography className={classes.valueText} align="center">
-            Q1 2018
+            Q1 2021
           </Typography>
           {/* btn */}
           <div className={classes.slideBtn} />
@@ -94,7 +94,7 @@ const Timeline = () => {
         >
           {/* text */}
           <Typography className={classes.valueText} align="center">
-            Q1 2018
+            Q2 2021
           </Typography>
           {/* btn */}
           <div className={classes.slideBtn} />
@@ -105,7 +105,7 @@ const Timeline = () => {
         >
           {/* text */}
           <Typography className={classes.valueText} align="center">
-            Q1 2018
+            Q3 2021
           </Typography>
           {/* btn */}
           <div className={classes.slideBtn} />
@@ -116,7 +116,7 @@ const Timeline = () => {
         >
           {/* text */}
           <Typography className={classes.valueText} align="center">
-            Q1 2018
+            Q4 2021
           </Typography>
           {/* btn */}
           <div className={classes.slideBtn} />
@@ -132,15 +132,14 @@ const Timeline = () => {
             align="center"
             className={classes.fontText}
           >
-            Jan - Apr 2018
+            LISTING ON EXCHANGE
           </Typography>
           <Typography
             color="secondary"
             align="center"
             className={classes.itemText}
           >
-            Creation of a decentralize martketplace to neural network adjacent
-            coefficients.
+            Listing on most popular AMM Exchange Pancakeswap.
           </Typography>
         </div>
         {/* item */}
@@ -151,15 +150,14 @@ const Timeline = () => {
             align="center"
             className={classes.fontText}
           >
-            Jan - Apr 2018
+            HEAVY MARKETING
           </Typography>
           <Typography
             color="secondary"
             align="center"
             className={classes.itemText}
           >
-            Creation of a decentralize martketplace to neural network adjacent
-            coefficients.
+            More Marketing with to boast the projects reach.
           </Typography>
         </div>
         {/* item */}
@@ -170,15 +168,14 @@ const Timeline = () => {
             align="center"
             className={classes.fontText}
           >
-            Jan - Apr 2018
+            DEX DEVELOPMENT
           </Typography>
           <Typography
             color="secondary"
             align="center"
             className={classes.itemText}
           >
-            Creation of a decentralize martketplace to neural network adjacent
-            coefficients.
+            Development of own Decentralized Dex on binance smart chain.
           </Typography>
         </div>
         {/* item */}
@@ -189,15 +186,14 @@ const Timeline = () => {
             align="center"
             className={classes.fontText}
           >
-            Jan - Apr 2018
+            DEX LAUNCH
           </Typography>
           <Typography
             color="secondary"
             align="center"
             className={classes.itemText}
           >
-            Creation of a decentralize martketplace to neural network adjacent
-            coefficients.
+            Launch of the Dex on binance smart chain.
           </Typography>
         </div>
       </div>

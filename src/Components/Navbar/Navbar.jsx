@@ -1,7 +1,6 @@
 import React from "react";
-import { Container, Hidden, makeStyles, Typography } from "@material-ui/core";
+import { Container, Hidden, makeStyles, Typography, Button } from "@material-ui/core";
 import Logo from "src/Assets/images/logofull.png";
-
 const useStyles = makeStyles((theme) => ({
   grid: {
     height: 60,
@@ -23,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
       <Container maxWidth="lg">
@@ -31,24 +29,36 @@ const Navbar = () => {
           <img height="80%" src={Logo} alt="bitsave" />
           <div />
           <Hidden xsDown>
-            <Typography className={classes.link} color="secondary">
-              Home
+            <a href='#home'>
+              <Typography className={classes.link} color="secondary">
+                Home
             </Typography>
-            <Typography className={classes.link} color="secondary">
-              Business Model
+            </a>
+            <a href="#business">
+              <Typography className={classes.link} color="secondary">
+                Business Model
             </Typography>
-            <Typography className={classes.link} color="secondary">
-              Features
+            </a>
+            <a href="#features">
+              <Typography className={classes.link} color="secondary">
+                Features
             </Typography>
-            <Typography className={classes.link} color="secondary">
-              Tokenomics
+            </a>
+            <a href='#tokenomics'>
+              <Typography className={classes.link} color="secondary">
+                Tokenomics
             </Typography>
-            <Typography className={classes.link} color="secondary">
-              Roadmap
+            </a>
+            <a href="#roadmap">
+              <Typography className={classes.link} color="secondary">
+                Roadmap
             </Typography>
-            <Typography className={classes.link} color="secondary">
-              Contact
+            </a>
+            <a href='#contact'>
+              <Typography className={classes.link} color="secondary">
+                Contact
             </Typography>
+            </a>
           </Hidden>
         </div>
       </Container>

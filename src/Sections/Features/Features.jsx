@@ -43,7 +43,7 @@ const Features = () => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg" className={classes.root}>
+    <Container id='features' maxWidth="lg" className={classes.root}>
       <TitleHeading heading="FEATURES" background="CORE FEATURES" />
       <div className={classes.container}>
         <Grid
@@ -62,15 +62,15 @@ const Features = () => {
             style={{ transform: "translateY(200px)" }}
           >
             <Typography align="center" style={{ fontSize: 16 }} color="primary">
-              Automatic Liquidity Generation
+              Transparency and Trust
             </Typography>
             <Typography
               color="secondary"
               align="center"
               style={{ marginTop: 10, marginBottom: 10 }}
             >
-              Every trade contributes toward automatically generating liquidity
-              locked inside PancakeSwap LP.
+              We utilize blockchain to assure in transparency 
+              and trust between buyers and sellers with provide guaranteed.
             </Typography>
             <div className="center" style={{ flexFlow: "column" }}>
               <div className={classes.dot} />
@@ -94,7 +94,7 @@ const Features = () => {
               style={{ marginTop: 10, marginBottom: 10 }}
             >
               Every trade contributes toward automatically generating liquidity
-              locked inside PancakeSwap LP.
+              locked inside Uniswap LP.
             </Typography>
             <div className="center" style={{ flexFlow: "column" }}>
               <div className={classes.dot} />
@@ -110,15 +110,16 @@ const Features = () => {
             style={{ transform: "translateY(100px)" }}
           >
             <Typography align="center" style={{ fontSize: 16 }} color="primary">
-              Automatic Liquidity Generation
+              Static Rewards
             </Typography>
             <Typography
               color="secondary"
               align="center"
               style={{ marginTop: 10, marginBottom: 10 }}
             >
-              Every trade contributes toward automatically generating liquidity
-              locked inside PancakeSwap LP.
+              Holders earn passive rewards through static 
+              reflection as they watch their balance 
+              of BitSafe grow indefinitely.
             </Typography>
             <div className="center" style={{ flexFlow: "column" }}>
               <div className={classes.dot} />
@@ -134,15 +135,16 @@ const Features = () => {
             style={{ transform: "translateY(200px)" }}
           >
             <Typography align="center" style={{ fontSize: 16 }} color="primary">
-              Automatic Liquidity Generation
+              Community-Driven
             </Typography>
             <Typography
               color="secondary"
               align="center"
               style={{ marginTop: 10, marginBottom: 10 }}
             >
-              Every trade contributes toward automatically generating liquidity
-              locked inside PancakeSwap LP.
+              BitSafe is crowdfunded by the people. The BitSafe 
+              community & all the holders will have a say on 
+              future implementations on the protocol.
             </Typography>
             <div className="center" style={{ flexFlow: "column" }}>
               <div className={classes.dot} />
