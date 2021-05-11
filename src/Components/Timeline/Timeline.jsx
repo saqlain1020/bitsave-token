@@ -1,5 +1,14 @@
 import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
+import { Hidden, makeStyles, Typography } from "@material-ui/core";
+import {
+  Timeline as MuiTimeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineOppositeContent,
+  TimelineSeparator,
+} from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,11 +58,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     maxWidth: 200,
     margin: "auto",
-    [theme.breakpoints.down('xs')]:{
-        fontSize:10,
-    maxWidth: 100,
-
-    }
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: 100,
+    },
   },
   fontText: {
     marginTop: 20,
@@ -61,9 +68,15 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontSize: 18,
     marginBottom: 20,
-    [theme.breakpoints.down('xs')]:{
-        fontSize:10,
-    }
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 0,
+    },
+  },
+  red: {
+    color: theme.palette.primary.main,
+  },
+  white: {
+    color: "white",
   },
 }));
 
@@ -72,131 +85,221 @@ const Timeline = () => {
 
   return (
     <div className={classes.root}>
-      {/* slide */}
-      <div className={classes.slide}>
-        {/* subslide */}
-        <div className={classes.subSlide} />
-        {/* text btns */}
-        <div
-          className={classes.btnWrapper}
-          style={{ left: "calc(15% - 10px)" }}
-        >
-          {/* text */}
-          <Typography className={classes.valueText} align="center">
-            Q1 2021
-          </Typography>
-          {/* btn */}
-          <div className={classes.slideBtn} />
-        </div>
-        <div
-          className={classes.btnWrapper}
-          style={{ left: "calc(38% - 10px)" }}
-        >
-          {/* text */}
-          <Typography className={classes.valueText} align="center">
-            Q2 2021
-          </Typography>
-          {/* btn */}
-          <div className={classes.slideBtn} />
-        </div>
-        <div
-          className={classes.btnWrapper}
-          style={{ left: "calc(62% - 10px)" }}
-        >
-          {/* text */}
-          <Typography className={classes.valueText} align="center">
-            Q3 2021
-          </Typography>
-          {/* btn */}
-          <div className={classes.slideBtn} />
-        </div>
-        <div
-          className={classes.btnWrapper}
-          style={{ left: "calc(85% - 10px)" }}
-        >
-          {/* text */}
-          <Typography className={classes.valueText} align="center">
-            Q4 2021
-          </Typography>
-          {/* btn */}
-          <div className={classes.slideBtn} />
-        </div>
-      </div>
-      {/* width same as slide */}
-      <div className={classes.itemsDiv}>
-        {/* item */}
-        <div className={classes.item} style={{ left: "calc(15% - 100px)" }}>
-          {/* text */}
-          <Typography
-            color="primary"
-            align="center"
-            className={classes.fontText}
+      {/* Mobile */}
+      <Hidden mdUp>
+        <MuiTimeline align="alternate">
+          <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography className={classes.white}>
+                <Typography
+                  color="primary"
+                  align="center"
+                  className={classes.fontText}
+                >
+                  LISTING ON EXCHANGE
+                </Typography>
+                <Typography
+                  color="secondary"
+                  align="center"
+                  className={classes.itemText}
+                >
+                  Listing on most popular AMM Exchange Pancakeswap.
+                </Typography>
+              </Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Typography className={classes.red}>Q1 2021</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography
+                color="primary"
+                align="center"
+                className={classes.fontText}
+              >
+                HEAVY MARKETING
+              </Typography>
+              <Typography
+                color="secondary"
+                align="center"
+                className={classes.itemText}
+              >
+                More Marketing with to boast the projects reach.
+              </Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Typography className={classes.red}>Q2 2021</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography
+                color="primary"
+                align="center"
+                className={classes.fontText}
+              >
+                DEX DEVELOPMENT
+              </Typography>
+              <Typography
+                color="secondary"
+                align="center"
+                className={classes.itemText}
+              >
+                Development of own Decentralized Dex on binance smart chain.
+              </Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Typography className={classes.red}>Q3 2021</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent>
+              <Typography
+                color="primary"
+                align="center"
+                className={classes.fontText}
+              >
+                DEX LAUNCH
+              </Typography>
+              <Typography
+                color="secondary"
+                align="center"
+                className={classes.itemText}
+              >
+                Launch of the Dex on binance smart chain.
+              </Typography>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Typography className={classes.red}>Q4 2021</Typography>
+            </TimelineContent>
+          </TimelineItem>
+        </MuiTimeline>
+      </Hidden>
+      {/* Desktop */}
+      <Hidden smDown>
+        <div className={classes.slide}>
+          <div className={classes.subSlide} />
+          <div
+            className={classes.btnWrapper}
+            style={{ left: "calc(15% - 10px)" }}
           >
-            LISTING ON EXCHANGE
-          </Typography>
-          <Typography
-            color="secondary"
-            align="center"
-            className={classes.itemText}
+            <Typography className={classes.valueText} align="center">
+              Q1 2021
+            </Typography>
+            <div className={classes.slideBtn} />
+          </div>
+          <div
+            className={classes.btnWrapper}
+            style={{ left: "calc(38% - 10px)" }}
           >
-            Listing on most popular AMM Exchange Pancakeswap.
-          </Typography>
+            <Typography className={classes.valueText} align="center">
+              Q2 2021
+            </Typography>
+            <div className={classes.slideBtn} />
+          </div>
+          <div
+            className={classes.btnWrapper}
+            style={{ left: "calc(62% - 10px)" }}
+          >
+            <Typography className={classes.valueText} align="center">
+              Q3 2021
+            </Typography>
+            <div className={classes.slideBtn} />
+          </div>
+          <div
+            className={classes.btnWrapper}
+            style={{ left: "calc(85% - 10px)" }}
+          >
+            <Typography className={classes.valueText} align="center">
+              Q4 2021
+            </Typography>
+            <div className={classes.slideBtn} />
+          </div>
         </div>
-        {/* item */}
-        <div className={classes.item} style={{ left: "calc(38% - 100px)" }}>
-          {/* text */}
-          <Typography
-            color="primary"
-            align="center"
-            className={classes.fontText}
-          >
-            HEAVY MARKETING
-          </Typography>
-          <Typography
-            color="secondary"
-            align="center"
-            className={classes.itemText}
-          >
-            More Marketing with to boast the projects reach.
-          </Typography>
+        <div className={classes.itemsDiv}>
+          <div className={classes.item} style={{ left: "calc(15% - 100px)" }}>
+            <Typography
+              color="primary"
+              align="center"
+              className={classes.fontText}
+            >
+              LISTING ON EXCHANGE
+            </Typography>
+            <Typography
+              color="secondary"
+              align="center"
+              className={classes.itemText}
+            >
+              Listing on most popular AMM Exchange Pancakeswap.
+            </Typography>
+          </div>
+          <div className={classes.item} style={{ left: "calc(38% - 100px)" }}>
+            <Typography
+              color="primary"
+              align="center"
+              className={classes.fontText}
+            >
+              HEAVY MARKETING
+            </Typography>
+            <Typography
+              color="secondary"
+              align="center"
+              className={classes.itemText}
+            >
+              More Marketing with to boast the projects reach.
+            </Typography>
+          </div>
+          <div className={classes.item} style={{ left: "calc(62% - 100px)" }}>
+            <Typography
+              color="primary"
+              align="center"
+              className={classes.fontText}
+            >
+              DEX DEVELOPMENT
+            </Typography>
+            <Typography
+              color="secondary"
+              align="center"
+              className={classes.itemText}
+            >
+              Development of own Decentralized Dex on binance smart chain.
+            </Typography>
+          </div>
+          <div className={classes.item} style={{ left: "calc(85% - 100px)" }}>
+            <Typography
+              color="primary"
+              align="center"
+              className={classes.fontText}
+            >
+              DEX LAUNCH
+            </Typography>
+            <Typography
+              color="secondary"
+              align="center"
+              className={classes.itemText}
+            >
+              Launch of the Dex on binance smart chain.
+            </Typography>
+          </div>
         </div>
-        {/* item */}
-        <div className={classes.item} style={{ left: "calc(62% - 100px)" }}>
-          {/* text */}
-          <Typography
-            color="primary"
-            align="center"
-            className={classes.fontText}
-          >
-            DEX DEVELOPMENT
-          </Typography>
-          <Typography
-            color="secondary"
-            align="center"
-            className={classes.itemText}
-          >
-            Development of own Decentralized Dex on binance smart chain.
-          </Typography>
-        </div>
-        {/* item */}
-        <div className={classes.item} style={{ left: "calc(85% - 100px)" }}>
-          {/* text */}
-          <Typography
-            color="primary"
-            align="center"
-            className={classes.fontText}
-          >
-            DEX LAUNCH
-          </Typography>
-          <Typography
-            color="secondary"
-            align="center"
-            className={classes.itemText}
-          >
-            Launch of the Dex on binance smart chain.
-          </Typography>
-        </div>
-      </div>
+      </Hidden>
     </div>
   );
 };

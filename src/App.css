@@ -22,3 +22,7 @@ html {
 a{
   text-decoration: none;
 }
+.MuiTimelineDot-root{
+  background-color: #F42F54 !important;
+  border: 2px solid white !important;
+}

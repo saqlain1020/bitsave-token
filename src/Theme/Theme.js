@@ -15,7 +15,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {},
-  overrides: {
+  overrides: {    
     MuiButton: {
       root: {
         borderRadius: 360,
@@ -48,6 +48,7 @@ const theme = createMuiTheme({
         color: "white",
       },
     },
+    
   },
   customShadows: {
     light: "0px 0px 20px rgba(0,0,0,0.06)",
